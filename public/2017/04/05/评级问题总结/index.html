@@ -1,0 +1,892 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css,面试，问题，js," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="记录之前面试的总结..">
+<meta property="og:type" content="article">
+<meta property="og:title" content="问题总结">
+<meta property="og:url" content="https://mayufo.github.io/2017/04/05/评级问题总结/index.html">
+<meta property="og:site_name" content="mayufo">
+<meta property="og:description" content="记录之前面试的总结..">
+<meta property="og:updated_time" content="2017-04-19T04:54:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="问题总结">
+<meta name="twitter:description" content="记录之前面试的总结..">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://mayufo.github.io/2017/04/05/评级问题总结/"/>
+
+
+
+
+
+  <title> 问题总结 | mayufo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">mayufo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://mayufo.github.io/2017/04/05/评级问题总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mayufo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mayufo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                问题总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-05T00:19:22+08:00">
+                2017-04-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>记录之前面试的总结..</p>
+<a id="more"></a>
+<h1 id="BOM和DOM-含义，全拼"><a href="#BOM和DOM-含义，全拼" class="headerlink" title="BOM和DOM 含义，全拼"></a>BOM和DOM 含义，全拼</h1><p>document object model 文档对象模型，把文档当做一个对象来看待<br>browser object model 浏览器对象模型 把浏览器当做一个对象来看</p>
+<h1 id="javascript基础数据类型"><a href="#javascript基础数据类型" class="headerlink" title="javascript基础数据类型"></a>javascript基础数据类型</h1><p>数字、字符串、undefined、对象、null、boolean</p>
+<h1 id="如何判断数据类型："><a href="#如何判断数据类型：" class="headerlink" title="如何判断数据类型："></a>如何判断数据类型：</h1><p>typeof 常见类型的判断<br>instanceof 对已知对象类型的判断<br>其中typeof返回的类型都是字符串形式，在判断object类型是比较方便<br>instanceof 后面一定要是对象类型，并且大小写不能错，该方法适合一些条件选择或分支</p>
+<h1 id="如何判断一个数据是数组类型："><a href="#如何判断一个数据是数组类型：" class="headerlink" title="如何判断一个数据是数组类型："></a>如何判断一个数据是数组类型：</h1><p>constructor<br>instanceof<br>isArray</p>
+<h1 id="判断浮点数"><a href="#判断浮点数" class="headerlink" title="判断浮点数"></a>判断浮点数</h1><p>正则<br>将这个浮点数转为字符串，判断里面是否有点</p>
+<h1 id="有一个div，它内部宽度不确定，我想让它相对于父元素垂直水平居中，如何设计？"><a href="#有一个div，它内部宽度不确定，我想让它相对于父元素垂直水平居中，如何设计？" class="headerlink" title="有一个div，它内部宽度不确定，我想让它相对于父元素垂直水平居中，如何设计？"></a>有一个div，它内部宽度不确定，我想让它相对于父元素垂直水平居中，如何设计？</h1><p>flex布局<br>line-height 垂直， margin: 0 auto<br>clentWidth - offsetWidth<br>transform: translate(-50%, -50%);<br>利用伪类实现<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">            <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">            <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">　　　　　　  <span class="attribute">text-align</span>: center;</div><div class="line">            <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</div><div class="line">    &#125; </div><div class="line">    <span class="selector-class">.goal</span> &#123;</div><div class="line">            <span class="attribute">display</span>: inline-block;</div><div class="line">            <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">            <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">            <span class="attribute">vertical-align</span>: middle;</div><div class="line">            <span class="attribute">background-color</span>: deeppink;</div><div class="line">     &#125; </div><div class="line">　　 <span class="selector-class">.wrapper</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line">            <span class="attribute">content</span>: <span class="string">' '</span>;</div><div class="line">            <span class="attribute">display</span>: inline-block;</div><div class="line">            <span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">            <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">            <span class="attribute">vertical-align</span>: middle;</div><div class="line">            <span class="attribute">background-color</span>: deeppink;</div><div class="line">　　 &#125;</div></pre></td></tr></table></figure></p>
+<h1 id="html语义化的理解"><a href="#html语义化的理解" class="headerlink" title="html语义化的理解"></a>html语义化的理解</h1><p>便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析<br>方便其他设备解析</p>
+<h1 id="http状态码："><a href="#http状态码：" class="headerlink" title="http状态码："></a>http状态码：</h1><p>1 开头  代表消息<br>2 代表成功<br>3 重定向<br>4 请求错误<br>5，6 服务器错误</p>
+<h1 id="cookie，sessionStorage与localStorage区别"><a href="#cookie，sessionStorage与localStorage区别" class="headerlink" title="cookie，sessionStorage与localStorage区别"></a>cookie，sessionStorage与localStorage区别</h1><p>　共同点：都是保存在浏览器端，且同源的。</p>
+<p> 区别：cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递；cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。</p>
+<p> 而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</p>
+<p> 数据有效期不同，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。</p>
+<p> 作用域不同，sessionStorage不能在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。。</p>
+<h1 id="css3新特性"><a href="#css3新特性" class="headerlink" title="css3新特性"></a>css3新特性</h1><ul>
+<li>css3 选择器</li>
+<li>css3实现圆角（border-radius），阴影（box-shadow），</li>
+<li>对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）</li>
+<li>transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);// 旋转,缩放,定位,倾斜</li>
+<li>增加了更多的CSS选择器  多背景 rgba</li>
+<li>在CSS3中唯一引入的伪元素是 ::selection.</li>
+<li>媒体查询，多栏布局</li>
+<li>border-image</li>
+</ul>
+<h1 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h1><ul>
+<li>兄弟选择器</li>
+<li>属性选择器</li>
+</ul>
+<h1 id="引入normalize的作用。"><a href="#引入normalize的作用。" class="headerlink" title="引入normalize的作用。"></a>引入normalize的作用。</h1><p>是保留浏览器的原来样式并且做到每个浏览显示一致</p>
+<h1 id="性能优化：减少请求、简化页面结构、优化代码、压缩机制、图片。"><a href="#性能优化：减少请求、简化页面结构、优化代码、压缩机制、图片。" class="headerlink" title="性能优化：减少请求、简化页面结构、优化代码、压缩机制、图片。"></a>性能优化：减少请求、简化页面结构、优化代码、压缩机制、图片。</h1><h1 id="css雪碧图的优缺点"><a href="#css雪碧图的优缺点" class="headerlink" title="css雪碧图的优缺点"></a>css雪碧图的优缺点</h1><p>优点：<br>减少请求，提升页面性能<br>减少图片的字节数<br>解决了图片命名的困扰<br>更换风格方便统一<br>缺点<br>在图片合并的时候，多张图片合并在一张图片，要保留好足够的空间，防止出现不必要的背景图片<br>可维护性查，每次的修改都要在这个图片上修改，如果图片较多，你要记住位置<br>图片的位置需要固定绝对值定位，失去了灵活性</p>
+<h1 id="display有哪些值-none、block、inline、inline-block-table。img元素是什么元素？inline"><a href="#display有哪些值-none、block、inline、inline-block-table。img元素是什么元素？inline" class="headerlink" title="display有哪些值:none、block、inline、inline-block,table。img元素是什么元素？inline"></a>display有哪些值:none、block、inline、inline-block,table。img元素是什么元素？inline</h1><h1 id="XMLHttpRequest原生"><a href="#XMLHttpRequest原生" class="headerlink" title="XMLHttpRequest原生"></a>XMLHttpRequest原生</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xhr.open(method, url, <span class="literal">true</span>);</div><div class="line">xhr.send();</div><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span>(xhr.readyState === <span class="number">4</span> &amp;&amp; xhr.status === <span class="number">200</span>) &#123;</div><div class="line">      </div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="哪些事件会触发脏检查？"><a href="#哪些事件会触发脏检查？" class="headerlink" title="哪些事件会触发脏检查？"></a>哪些事件会触发脏检查？</h1><p>当在view绑定数据，触发事件都会触发脏检测 ng-model ng-click</p>
+<h1 id="digest和-apply有什么区别？"><a href="#digest和-apply有什么区别？" class="headerlink" title="$digest和$apply有什么区别？"></a>$digest和$apply有什么区别？</h1><p>$scope.$apply()会自动调用$rootScope.$digest()。$apply()函数可以以两种方式运行。第一种是将函数作为参数，并且评估他，然后触发$digest循环。第二种并不传入任何参数，仅仅是执行一个$digest循环。<br>如果我们更改一个不在AngularJS执行上下文中的数据模型(model)，就需要人为的调用$apply()来提醒AngularJS数据发生变化了。就像是要告诉AngularJS，我们改变了一些数据，他应该启用监听器以便于让我们所做的改变能够反映出来。<br>当你为$apply()传入函数的时候，这个函数在调用的时候是包含在try..catch中的，并且，任何发生的异常都能够被$exceptionHandler服务所接收。</p>
+<blockquote>
+<p><a href="https://segmentfault.com/a/1190000004523893" target="_blank" rel="external">https://segmentfault.com/a/1190000004523893</a></p>
+</blockquote>
+<h1 id="数据请求和前端资源优化？"><a href="#数据请求和前端资源优化？" class="headerlink" title="数据请求和前端资源优化？"></a>数据请求和前端资源优化？</h1><p>配置超长时间的本地缓存 —— 节省带宽，提高性能<br>采用内容摘要作为缓存更新依据 —— 精确的缓存控制<br>静态资源CDN部署 —— 优化网络请求<br>资源发布路径实现非覆盖式发布 —— 平滑升级</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+            <a href="/tags/面试，问题，js/" rel="tag"># 面试，问题，js</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/02/webpack/" rel="next" title="webpack">
+                <i class="fa fa-chevron-left"></i> webpack
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/05/ajax原理/" rel="prev" title="ajax原理">
+                ajax原理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="mayufo" />
+          <p class="site-author-name" itemprop="name">mayufo</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#BOM和DOM-含义，全拼"><span class="nav-number">1.</span> <span class="nav-text">BOM和DOM 含义，全拼</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript基础数据类型"><span class="nav-number">2.</span> <span class="nav-text">javascript基础数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何判断数据类型："><span class="nav-number">3.</span> <span class="nav-text">如何判断数据类型：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何判断一个数据是数组类型："><span class="nav-number">4.</span> <span class="nav-text">如何判断一个数据是数组类型：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#判断浮点数"><span class="nav-number">5.</span> <span class="nav-text">判断浮点数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有一个div，它内部宽度不确定，我想让它相对于父元素垂直水平居中，如何设计？"><span class="nav-number">6.</span> <span class="nav-text">有一个div，它内部宽度不确定，我想让它相对于父元素垂直水平居中，如何设计？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#html语义化的理解"><span class="nav-number">7.</span> <span class="nav-text">html语义化的理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#http状态码："><span class="nav-number">8.</span> <span class="nav-text">http状态码：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cookie，sessionStorage与localStorage区别"><span class="nav-number">9.</span> <span class="nav-text">cookie，sessionStorage与localStorage区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css3新特性"><span class="nav-number">10.</span> <span class="nav-text">css3新特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css选择器"><span class="nav-number">11.</span> <span class="nav-text">css选择器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引入normalize的作用。"><span class="nav-number">12.</span> <span class="nav-text">引入normalize的作用。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能优化：减少请求、简化页面结构、优化代码、压缩机制、图片。"><span class="nav-number">13.</span> <span class="nav-text">性能优化：减少请求、简化页面结构、优化代码、压缩机制、图片。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css雪碧图的优缺点"><span class="nav-number">14.</span> <span class="nav-text">css雪碧图的优缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#display有哪些值-none、block、inline、inline-block-table。img元素是什么元素？inline"><span class="nav-number">15.</span> <span class="nav-text">display有哪些值:none、block、inline、inline-block,table。img元素是什么元素？inline</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XMLHttpRequest原生"><span class="nav-number">16.</span> <span class="nav-text">XMLHttpRequest原生</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#哪些事件会触发脏检查？"><span class="nav-number">17.</span> <span class="nav-text">哪些事件会触发脏检查？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#digest和-apply有什么区别？"><span class="nav-number">18.</span> <span class="nav-text">$digest和$apply有什么区别？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据请求和前端资源优化？"><span class="nav-number">19.</span> <span class="nav-text">数据请求和前端资源优化？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mayufo</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
